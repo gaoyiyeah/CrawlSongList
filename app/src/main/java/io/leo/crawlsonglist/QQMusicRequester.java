@@ -7,6 +7,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Requester of qq music.
+ *
+ * Problem :
+ *  - Can't get the song cover
+ */
 public class QQMusicRequester extends Requester{
 
     public QQMusicRequester(Callback callback) {
@@ -31,7 +37,7 @@ public class QQMusicRequester extends Requester{
             JSONObject cdlist = new JSONObject(resp).getJSONArray("cdlist").getJSONObject(0);
 
             list.setName(cdlist.getString("dissname"));
-            list.setName(cdlist.getString("nick"));
+            list.setCreateUser(cdlist.getString("nick"));
             list.setCoverUrl(cdlist.getString("logo"));
 
             JSONArray songsArray = cdlist.getJSONArray("songlist");

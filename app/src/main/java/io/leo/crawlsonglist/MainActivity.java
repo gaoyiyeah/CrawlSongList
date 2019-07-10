@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             String songId = null;
             if (url.indexOf("y.qq.com")!=-1) {requester = new QQMusicRequester(callback);songId=getString(url,"playsquare/(\\d+)\\.html");headerView.setText("来自QQ音乐");}
             else if(url.indexOf("www.kugou.com")!=-1){requester = new KugouRequester(callback);songId=url;headerView.setText("来自酷狗音乐");}
+            else if(url.indexOf("music.163.com")!=-1){requester = new NeteaseRequester(callback);songId=getString(url,"playlist/(\\d+)/");headerView.setText("来自网易云");}
             if (songId!=null)
                 requester.getSongList(songId);
             else

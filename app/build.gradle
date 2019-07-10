@@ -29,7 +29,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation files('libs/okio-1.10.0.jar')
     implementation files('libs/okhttp-3.10.0.jar')
-    implementation files('libs/jsoup-1.11.3.jar')
+    implementation files('libs/okio-1.13.0.jar')
 }

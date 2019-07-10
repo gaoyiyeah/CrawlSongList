@@ -3,15 +3,17 @@ package io.leo.crawlsonglist;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
+/**
+ * Requester of kugou music.
+ *
+ * Problem :
+ *  - Can't get the song cover
+ */
 public class KugouRequester extends Requester{
 
     public KugouRequester(Callback callback) {
